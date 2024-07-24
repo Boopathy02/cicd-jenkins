@@ -2,7 +2,7 @@ FROM tomcat:8-jre11
 LABEL "Project"="Vprofile"
 
 RUN rm -rf /usr/local/tomcat/webapps/*
-COPY target/vprofile-5.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/vprofile-8.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
