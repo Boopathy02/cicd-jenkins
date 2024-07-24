@@ -12,15 +12,15 @@ pipeline {
         jdk "openjdk-11"
     }
     environment {
-        SNAP_REPO = 'vproflie-snapshot'
+        SNAP_REPO = 'vproflie-snapshot_01'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin'
-        RELEASE_REPO = 'vprofile-release'
-        CENTRAL_REPO = 'vprofile-maven-central'
+        RELEASE_REPO = 'vprofile-release_01'
+        CENTRAL_REPO = 'vprofile-maven-central_01'
         NEXUSIP = '192.168.1.14'
         NEXUS_URL = '192.168.1.14'
         NEXUSPORT = '8081'
-        NEXUS_GRP_REPO = 'vprofile-maven-group'
+        NEXUS_GRP_REPO = 'vprofile-maven-group_01'
 
         // Additional Docker variables
         appregistry = "https://registry.hub.docker.com"
@@ -33,7 +33,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Boopathy02/vprofile-project.git', branch: 'cicd-jenkins'
+                git url: 'https://github.com/Boopathy02/test_02.git', branch: 'test_02  '
             }
         }
         stage('Build') {

@@ -1,6 +1,6 @@
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven git -y
-RUN git clone -b cicd-jenkins https://github.com/Boopathy02/vprofile-project.git
+RUN git clone -b cicd-jenkins https://github.com/Boopathy02/test_02.git
 WORKDIR vprofile-project/
 RUN git checkout cicd-jenkins 
 RUN echo "$(pwd)"
