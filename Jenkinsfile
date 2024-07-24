@@ -71,11 +71,11 @@ pipeline {
                         artifacts: [
                             [artifactId: 'vproapp',
                             classifier: '',
-                            file: 'target/vprofile-v2_01.war',
+                            file: 'target/vprofile-v2.war',
                             type: 'war']
                         ]
                     )
-                }
+                }   
             }
         }
         stage('Build App image') {
