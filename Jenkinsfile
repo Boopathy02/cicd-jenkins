@@ -27,13 +27,13 @@ pipeline {
         vprofileRegistry = "boopathy102"
         registryCredential = "dockerHub"
         
-        DOCKER_IMAGE_NAME = "boopathy102/vprofile"
+        DOCKER_IMAGE_NAME = "boopathy102/vprofile_01"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Boopathy02/test_02.git', branch: 'test_02  '
+                git url: 'https://github.com/Boopathy02/test_02.git', branch: 'test_02 '
             }
         }
         stage('Build') {
@@ -71,7 +71,7 @@ pipeline {
                         artifacts: [
                             [artifactId: 'vproapp',
                             classifier: '',
-                            file: 'target/vprofile-v2.war',
+                            file: 'target/vprofile-v2_01.war',
                             type: 'war']
                         ]
                     )
