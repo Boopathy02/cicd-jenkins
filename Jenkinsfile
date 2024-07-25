@@ -33,7 +33,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Boopathy02/test_02.git', branch: 'test_02 '
+                git url: 'https://github.com/Boopathy02/cicd-jenkins.git', branch: 'test_02 '
             }
         }
         stage('Build') {
