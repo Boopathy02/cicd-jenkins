@@ -3,8 +3,7 @@ LABEL "Project"="Vprofile"
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 RUN echo "$(pwd)"
-COPY /var/lib/jenkins/workspace/test_02/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
-
+COPY ../target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
 WORKDIR /usr/local/tomcat/
