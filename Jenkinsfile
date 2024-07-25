@@ -96,4 +96,10 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'Cleaning up workspace...'
+            cleanWs()  // Clean up the workspace
+        }
+    }
 }
